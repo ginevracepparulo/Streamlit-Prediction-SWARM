@@ -16,7 +16,6 @@ GOOGLE_CSE_ID = os.environ.get("GOOGLE_CSE_ID", "64c807de4a9d1425d")
 groq_client = Groq(api_key=GROQ_API_KEY)
 
 OPEN_AI_KEY = "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"
-OPEN_AI_KEY = st.secrets["OPENAI_API_KEY"]
 os.environ["OPENAI_API_KEY"] = OPEN_AI_KEY
 # Constants openai/gpt-4.5-preview openai/gpt-3.5-turbo
 MODEL_NAME = "llama-3.3-70b-versatile"  
