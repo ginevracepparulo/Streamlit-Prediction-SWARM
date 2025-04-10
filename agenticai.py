@@ -28,6 +28,7 @@ NEWS_API_TOKEN = st.secrets["NEWS_API_TOKEN"]
 GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 GOOGLE_CSE_ID = st.secrets["GOOGLE_CSE_ID"]
 OPEN_AI_KEY = st.secrets["OPENAI_API_KEY"]
+os.environ["OPENAI_AI_KEY"] = OPEN_AI_KEY
 
 # Initialize Groq client
 groq_client = Groq(api_key=GROQ_API_KEY)
