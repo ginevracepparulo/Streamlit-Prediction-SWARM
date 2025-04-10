@@ -5,18 +5,27 @@ from agenticai import PredictionFinder, PredictorProfiler, PredictionVerifier
 import os 
 from groq import Groq
 
+"""
 # API Keys - Replace with your actual keys
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "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")
 DATURA_API_KEY = os.environ.get("DATURA_API_KEY", "dt_$X6oACKtNOE_2RL984Dg-C8Ds6HZmsQLA4N7ez3NysVg")
 NEWS_API_TOKEN = os.environ.get("NEWS_API_TOKEN", "drAk0dGvkyZWSoutZe1sRgfY81HpTYiwERgrSgsw")
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY", "AIzaSyBo8-CKyb3IzZbRzx685TqDi9EutAg7FkE")
 GOOGLE_CSE_ID = os.environ.get("GOOGLE_CSE_ID", "64c807de4a9d1425d")
+OPEN_AI_KEY = os.environ.get(OPEN_AI_KEY, "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")
+"""
+
+# Load keys from Streamlit secrets
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+DATURA_API_KEY = st.secrets["DATURA_API_KEY"]
+NEWS_API_TOKEN = st.secrets["NEWS_API_TOKEN"]
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+GOOGLE_CSE_ID = st.secrets["GOOGLE_CSE_ID"]
+OPEN_AI_KEY = st.secrets["OPENAI_API_KEY"]
 
 # Initialize Groq client
 groq_client = Groq(api_key=GROQ_API_KEY)
 
-OPEN_AI_KEY = "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"
-os.environ["OPENAI_API_KEY"] = OPEN_AI_KEY
 # Constants openai/gpt-4.5-preview openai/gpt-3.5-turbo
 MODEL_NAME = "llama-3.3-70b-versatile"  
 MODEL_NAME_1 = "openai/gpt-4.5-preview"
