@@ -129,7 +129,7 @@ class StreamlitUserProxyAgent(UserProxyAgent):
 def create_prediction_agents():
     # Configuration for the LLM seed = 42 (Store the previous interactions)
     llm_config = {
-        "config_list": [{"model": MODEL_NAME_1, "api_key": OPEN_AI_KEY, "base_url": "https://openrouter.ai/api/v1"}],
+        "config_list": [{"model": MODEL_NAME_1, "api_key": OPEN_AI_KEY, "base_url": "https://api.openai.com/v1"}],
         "temperature": 0.3,
         "tools": tools_schema,
     }
