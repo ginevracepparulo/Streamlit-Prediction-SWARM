@@ -37,7 +37,7 @@ groq_client = Groq(api_key=GROQ_API_KEY)
 
 # Constants openai/gpt-4.5-preview openai/gpt-3.5-turbo
 MODEL_NAME = "llama-3.3-70b-versatile"  
-MODEL_NAME_1 = "openai/gpt-4.5-preview"
+MODEL_NAME_1 = "gpt-4"
 DATURA_API_URL = "https://apis.datura.ai/twitter"
 
 
