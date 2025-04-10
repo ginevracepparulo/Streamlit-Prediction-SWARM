@@ -1,9 +1,12 @@
+import os
+import json
+import requests
+import re
+import time
+from typing import List, Dict, Any, Tuple
+from groq import Groq   
+
 import streamlit as st
-import asyncio
-from autogen import AssistantAgent, UserProxyAgent
-from agenticai import PredictionFinder, PredictorProfiler, PredictionVerifier
-import os 
-from groq import Groq
 
 """
 # API Keys - Replace with your actual keys
@@ -23,6 +26,11 @@ GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 GOOGLE_CSE_ID = st.secrets["GOOGLE_CSE_ID"]
 OPEN_AI_KEY = st.secrets["OPENAI_API_KEY"]
 os.environ["OPENAI_AI_KEY"] = OPEN_AI_KEY
+
+from autogen import Agent, AssistantAgent, UserProxyAgent, ConversableAgent
+import os
+os.environ["AUTOGEN_DEBUG"] = "1"  # Basic debug info
+os.environ["AUTOGEN_VERBOSE"] = "1"  # More detailed logging1
 
 # Initialize Groq client
 groq_client = Groq(api_key=GROQ_API_KEY)
